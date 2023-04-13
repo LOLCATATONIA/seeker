@@ -51,7 +51,7 @@ header('Content-Type: text/html');
   'wd' => $wd,
   'os' => $os);
 
-  $json_data = json_encode($data);
+  $json_data = json_encode($data).PHP_EOL;
 
   $f = fopen('../../logs/info.txt', 'w+');
   fwrite($f, $json_data);

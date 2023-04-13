@@ -18,7 +18,7 @@ header('Content-Type: text/html');
     'dir' => $dir,
     'spd' => $spd);
 
-  $json_data = json_encode($data);
+  $json_data = json_encode($data).PHP_EOL;
 
   $f = fopen('../../logs/result.txt', 'w+');
   fwrite($f, $json_data);
